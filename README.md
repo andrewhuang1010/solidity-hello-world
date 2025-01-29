@@ -1,4 +1,4 @@
-# Solidity-hello-world
+# solidity-hello-world
 
 Simple hello world project written in solidity.
 
