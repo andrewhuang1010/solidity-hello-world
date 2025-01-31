@@ -21,6 +21,26 @@ Verify the contract on etherscan.io
 (Everyone is able to see the contract details once verified)
 >npx hardhat verify --network sepolia CONTRACT_ADDRESS
 
+## Commands for running frontend
+
+Switch to the frontend directory
+>cd frontend
+
+Use npm to install all packages
+>npm install
+
+Add this line in ./node_modules/react-scripts/config/webpack.config.js under resolve around lines 310
+>fallback: { "http": require.resolve("stream-http"),
+      "https": require.resolve("https-browserify"), "zlib": require.resolve("browserify-zlib")  },
+
+Use npm to install @alch/alchemy-web3 package
+>npm install @alch/alchemy-web3
+
+Run frontend locally on http://localhost:3000/
+>npm start
+
+Additional details in the tutorial listed in frontend directory's README.md
+
 ## Links
 
 Smart Contract address on Sepolia testnet
